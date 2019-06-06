@@ -1,11 +1,11 @@
 package com.thetechnocafe.gurleensethi.bottomsheets
 
-import android.os.Bundle
 import android.support.design.widget.BottomSheetBehavior
 import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_bottom_sheet.*
 
 class BottomSheetActivity : AppCompatActivity() {
 
@@ -15,6 +15,10 @@ class BottomSheetActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bottom_sheet)
 
+        val openBottomSheetButton = findViewById<View>(R.id.openBottomSheetButton) as Button
+        val closeBottomSheetButton = findViewById<View>(R.id.closeBottomSheetButton) as Button
+
+        val nestedScrollView = findViewById(R.id.nestedScrollView) as View
         mBottomSheetBehaviour = BottomSheetBehavior.from(nestedScrollView)
 
         //Remove this line to disable peek
